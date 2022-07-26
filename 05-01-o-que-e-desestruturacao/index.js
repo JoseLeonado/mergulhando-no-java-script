@@ -7,11 +7,11 @@ function introduce({name, age}) {
    console.log(`Oi! meu nome é ${name} e eu tenho ${age} anos`)
 }
 
+introduce(person)
+
 const fruits = ['Banana', 'Morango', 'Manga']
 
 const [firstFruit, secondFruit] = fruits
-
-introduce(person)
 
 console.log(firstFruit)
 console.log(secondFruit)
