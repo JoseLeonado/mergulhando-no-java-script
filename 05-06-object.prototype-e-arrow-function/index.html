@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <title>Heranças</title>
+</head>
+
+<body>
+   <script>
+      class Human extends Animal {
+         hungry = true
+         awake = true
+
+         eat() {
+            this.hungry = false
+         }
+
+      }
+      
+      const person = new Human()
+
+      Human.prototype.sleep = () => {
+         this.awake = false
+      }
+      
+      person.sleep()
+
+      </script>
+</body>
+
+</html>
