@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Recebendo o valor da promise com then e catch</title>
+</head>
+
+<body>
+  <script>
+    function handleClick() {
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          reject('Erro inesperado')
+        }, 5000)
+      })
+    }
+
+    const result = handleClick()
+      .then(res => {
+        console.log(123 === res)
+        console.log('finalizou')
+        return 'batata'
+      })
+      .catch(err => {
+        console.log('houve um erro')
+        console.log(err)
+      })   
+  </script>
+</body>
+
+</html>
